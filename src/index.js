@@ -20,7 +20,6 @@ Studio.plugin.client = function(options){
 	        	if(localServices[rec]){
 	        		return send.apply(this,args);
 	        	}else{
-	        		console.log('send');
 	        		return new Studio.promise(function(resolve,reject){
 	        			socket.emit(options.serviceCallEventName,JSON.stringify({
 		        			service:rec,
