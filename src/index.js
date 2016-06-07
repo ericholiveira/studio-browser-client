@@ -5,7 +5,23 @@ var localServices={};
 var DEFAULT_NAMESPACE = '__browser';
 var DEFAULT_SERVICE_CALL_EVENT_NAME = '__studio_service_call'
 Studio.plugin = Studio.plugins || {};
-Studio.plugin.client = function(options){
+/**
+ * Plugin for socketio browser access
+ * @constructor
+ * @author Erich Oliveira
+ * @public
+ * @param {Object} options
+ * @param {String} options.defaultNamespace the module name which will prepend the service automatically instantiated for browser access. Defaults to __browser
+ * @param {String} options.serviceCallEventName The name of the channel used to communicate the services. Defaults to __studio_service_call
+ * @param {String} options.ip Server address (format: http://SOMEADDRESS:SOMEPORT/). Defaults to socket.io default
+ * @default {
+		defaultNamespace:'__browser',
+		serviceCallEventName:'__studio_service_call'
+ 	}
+ * @example 
+   Studio.use(Studio.plugin.client({ip:'http://localhost:3000/'}));
+ */
+function BrowserClient(options){
 	var ip,socket;
 	options = options || {};
 	options.defaultNamespace = options.defaultNamespace || DEFAULT_NAMESPACE;
@@ -36,5 +52,6 @@ Studio.plugin.client = function(options){
 	    });
 	};
 }
+Studio.plugin.client = BrowserClient;
 
 window.Studio = Studio;
