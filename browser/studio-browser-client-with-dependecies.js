@@ -16105,7 +16105,7 @@ var io = require('socket.io-client');
 var localServices={};
 
 var DEFAULT_NAMESPACE = '__browser';
-var DEFAULT_SERVICE_CALL_EVENT_NAME = '__studio_service_call'
+var DEFAULT_SERVICE_CALL_EVENT_NAME = '__studio_service_call';
 Studio.plugin = Studio.plugins || {};
 /**
  * Plugin for socketio browser access
