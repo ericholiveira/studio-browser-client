@@ -1,6 +1,6 @@
 {
   "name": "studio-browser-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Browser client to connect to studio micro services",
   "author": {
     "name": "Erich Oliveira",
