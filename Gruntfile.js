@@ -52,7 +52,7 @@ grunt.initConfig({
   	}
 });
 grunt.registerTask("test", ["browserify", "jasmine"]);
-grunt.registerTask("all", ["jshint"]);
+grunt.registerTask("all", ["jshint","test"]);
 grunt.registerTask("default", ["all"]);
 grunt.registerTask("doc",["jsdoc","jsdoc2md"]);
 grunt.registerTask("prod", ["all", "release"]);
