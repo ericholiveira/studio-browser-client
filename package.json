@@ -23,8 +23,11 @@
   },
   "main": "./src/index.js",
   "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.6",
     "socket.io-client": "^1.4.6",
-    "studio": "^0.13.1"
+    "studio": "^0.13.1",
+    "studio-browser": "^0.1.1"
   },
   "scripts": {
     "test": "node --harmony --harmony-proxies ./node_modules/.bin/grunt test",
@@ -36,14 +39,13 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "grunt": "0.4.x",
-    "grunt-cli": "0.1.13",
     "grunt-browserify": "^5.0.0",
+    "grunt-cli": "0.1.13",
+    "grunt-contrib-jasmine": "^1.0.3",
     "grunt-contrib-jshint": "0.12.0",
-    "grunt-jasmine-node": "0.2.1",
-    "grunt-jasmine-node-coverage": "0.2.0",
     "grunt-jsdoc": "^2.1.0",
     "grunt-jsdoc-to-markdown": "^1.2.1",
-    "ink-docstrap": "^1.2.1",
-    "grunt-release": "0.13.0"
+    "grunt-release": "0.13.0",
+    "ink-docstrap": "^1.2.1"
   }
 }

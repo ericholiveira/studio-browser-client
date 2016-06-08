@@ -4,6 +4,7 @@ grunt.loadNpmTasks('grunt-release');
 grunt.loadNpmTasks('grunt-jsdoc');
 grunt.loadNpmTasks('grunt-jsdoc-to-markdown');
 grunt.loadNpmTasks('grunt-browserify');
+grunt.loadNpmTasks('grunt-contrib-jasmine');
 grunt.initConfig({
 	jshint: {
 		all: ['src/**/*.js', '*.js', 'tests/**/*.js'],
@@ -40,8 +41,17 @@ grunt.initConfig({
 			src: 'src/*.js',
 			dest: '.documentation/README.md'
 		}
+  	},
+  	jasmine: {
+	    dist: {
+			src: 'browser/*.js',
+			options: {
+				specs: 'tests/**/*_tests.js'
+			}
+	    }
   	}
 });
+grunt.registerTask("test", ["browserify", "jasmine"]);
 grunt.registerTask("all", ["jshint"]);
 grunt.registerTask("default", ["all"]);
 grunt.registerTask("doc",["jsdoc","jsdoc2md"]);
