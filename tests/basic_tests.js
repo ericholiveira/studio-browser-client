@@ -1,5 +1,5 @@
 var DEFAULT_NAMESPACE = '__browser';
-var DEFAULT_SERVICE_CALL_EVENT_NAME = '__studio_service_call'
+var DEFAULT_SERVICE_CALL_EVENT_NAME = '__studio_service_call';
 describe("Basic test", function() {
   it("Must expose Studio on window", function() {
     expect(window.Studio).toBeDefined();
